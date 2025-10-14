@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -21,8 +21,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('home',[HomeController::class, 'index']);
+//Route::get('home',[HomeController::class, 'index']);
+Route::get('/loginAdmin',[AuthController::class, 'login']);
+Route::get('/registerAdmin',[AuthController::class, 'register']);
 
 Auth::routes();
 
-Route::get('/admin/login',[AdminController::class, 'login']);
+
