@@ -9,10 +9,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('../../asset/assets/images/favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('../../admin/assets/images/favicon.png') }}">
     <title>Nice admin Template - The Ultimate Multipurpose admin template</title>
     <!-- Custom CSS -->
-    <link href="{{ asset ('../../asset/dist/css/style.min.css') }}" rel="stylesheet">
+    <link href="{{ asset ('../../admin/dist/css/style.min.css') }}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,7 +42,7 @@
             <div class="auth-box">
                 <div id="loginform">
                     <div class="logo">
-                        <span class="db"><img src="{{asset ('../../asset/assets/images/logo-icon.png') }}" alt="logo" /></span>
+                        <span class="db"><img src="{{asset ('../../admin/assets/images/logo-icon.png') }}" alt="logo" /></span>
                         <h5 class="font-medium m-b-20">Sign In to Admin</h5>
                     </div>
                     <!-- Form -->
@@ -94,7 +94,7 @@
                 </div>
                 <div id="recoverform">
                     <div class="logo">
-                        <span class="db"><img src="{{asset ('../../asset/assets/images/logo-icon.png') }}" alt="logo" /></span>
+                        <span class="db"><img src="{{asset ('../../admin/assets/images/logo-icon.png') }}" alt="logo" /></span>
                         <h5 class="font-medium m-b-20">Recover Password</h5>
                         <span>Enter your Email and instructions will be sent to you!</span>
                     </div>
@@ -137,10 +137,10 @@
     <!-- ============================================================== -->
     <!-- All Required js -->
     <!-- ============================================================== -->
-    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="{{ asset('../../admin/assets/libs/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{{ asset('../../admin/assets/libs/popper.js/dist/umd/popper.min.js') }}"></script>
+    <script src="{{ asset('../../admin/assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <!-- ============================================================== -->
     <!-- This page plugin js -->
     <!-- ============================================================== -->
