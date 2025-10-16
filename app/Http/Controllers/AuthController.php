@@ -15,4 +15,9 @@ class AuthController extends Controller
 
         return view('admin/register');
     }
+
+    public function forgot(){
+
+        return view('admin/forgot');
+    }
 }
