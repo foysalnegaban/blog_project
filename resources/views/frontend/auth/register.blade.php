@@ -32,12 +32,7 @@
                 <div class="lds-pos"></div>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Login box.scss -->
-        <!-- ============================================================== -->
+        
         <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(../../admin/assets/images/big/auth-bg.jpg) no-repeat center center;">
             <div class="auth-box">
                 <div id="loginform">
@@ -48,26 +43,38 @@
                     <!-- Form -->
                     <div class="row">
                         <div class="col-12">
-                            <form class="form-horizontal m-t-20" id="loginform" action="index.html">
-                                
+
+                             @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+
+
+                            <form class="form-horizontal m-t-20" id="loginform" action="{{ url('/registerStore') }}" method="POST">
+                                @csrf
                                 <div class="form-group row ">
                                     <div class="col-12 ">
-                                        <input class="form-control form-control-lg" type="text" required=" " placeholder="Name">
+                                        <input class="form-control form-control-lg" name="name" type="text" required=" " placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-12 ">
-                                        <input class="form-control form-control-lg" type="text" required=" " placeholder="Email">
+                                        <input class="form-control form-control-lg" name="email" type="email" required=" " placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-12 ">
-                                        <input class="form-control form-control-lg" type="password" required=" " placeholder="Password">
+                                        <input class="form-control form-control-lg" name="password" type="password" required=" " placeholder="Password">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-12 ">
-                                        <input class="form-control form-control-lg" type="password" required=" " placeholder="Confirm Password">
+                                        <input class="form-control form-control-lg" name="Cpassword" type="password" required=" " placeholder="Confirm Password">
                                     </div>
                                 </div>
                                 <div class="form-group row">
