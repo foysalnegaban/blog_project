@@ -40,6 +40,12 @@
                         <span class="db"><img src="{{asset ('../../admin/assets/images/logo-icon.png') }}" alt="logo" /></span>
                         <h5 class="font-medium m-b-20">Sign In to Admin</h5>
                     </div>
+
+                    @if (Session::has('msg'))
+                        <p class="alert alert-success">{{ Session::get('msg') }}</p>
+                    @endif
+
+
                     <!-- Form -->
                     <div class="row">
                         <div class="col-12">
@@ -53,7 +59,20 @@
                                         </ul>
                                     </div>
                                 @endif
+                            <div class="mt-5">
+                                @if ($errors->any())
+                                    @foreach ($errors->all() as $error)
+                                        <div>{{$error}}</div>
+                                    @endforeach
+                                @endif
 
+                                 @if ($errors->any())
+                                    @foreach ($errors->all() as $success)
+                                        <div>{{$error}}</div>
+                                    @endforeach
+                                @endif
+
+                            </div>
 
                             <form class="form-horizontal m-t-20" id="loginform" action="{{ url('/registerStore') }}" method="POST">
                                 @csrf
@@ -72,11 +91,9 @@
                                         <input class="form-control form-control-lg" name="password" type="password" required=" " placeholder="Password">
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-12 ">
-                                        <input class="form-control form-control-lg" name="Cpassword" type="password" required=" " placeholder="Confirm Password">
-                                    </div>
-                                </div>
+                                
+                               
+                                
                                 <div class="form-group row">
                                     <div class="col-md-12 ">
                                         <div class="custom-control custom-checkbox">

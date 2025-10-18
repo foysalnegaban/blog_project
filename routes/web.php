@@ -21,6 +21,6 @@ Route::post('/registerStore',[AuthController::class, 'registerStore']);
 Route::get('/forgotPass',[AuthController::class, 'forgot']);
 Route::get('/home',[HomeController::class, 'index']);
 
-//Auth::routes();
+Auth::routes();
 
 
